@@ -22,23 +22,24 @@ Partial Class rekap
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.components = New System.ComponentModel.Container()
+        Me.KasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.kasMasuk = New System.Windows.Forms.Button()
         Me.kembali = New System.Windows.Forms.Button()
         Me.cetak = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.KasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'KasBindingSource
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 74)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 275)
-        Me.DataGridView1.TabIndex = 0
+        Me.KasBindingSource.DataMember = "kas"
         '
         'Label1
         '
@@ -101,31 +102,55 @@ Partial Class rekap
         Me.cetak.Text = "Cetak"
         Me.cetak.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 80)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(776, 267)
+        Me.DataGridView1.TabIndex = 29
+        '
         'rekap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.cetak)
         Me.Controls.Add(Me.kembali)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.kasMasuk)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "rekap"
         Me.Text = "rekap"
+        CType(Me.KasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents kasMasuk As Button
     Friend WithEvents kembali As Button
     Friend WithEvents cetak As Button
+
+    Friend WithEvents KasBindingSource As BindingSource
+
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TanggalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents JenisDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents KeteranganDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents JumlahDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+
+    Friend WithEvents KasBindingSource1 As BindingSource
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

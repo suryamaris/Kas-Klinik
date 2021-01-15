@@ -24,14 +24,15 @@ Partial Class Home
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.kasMasuk = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.kasKeluar = New System.Windows.Forms.Button()
+        Me.rekapitulasi = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.masuk = New System.Windows.Forms.TextBox()
+        Me.keluar = New System.Windows.Forms.TextBox()
+        Me.saldo = New System.Windows.Forms.TextBox()
+        Me.data = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -55,25 +56,25 @@ Partial Class Home
         Me.kasMasuk.Text = "Kas Masuk"
         Me.kasMasuk.UseVisualStyleBackColor = True
         '
-        'Button2
+        'kasKeluar
         '
-        Me.Button2.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(613, 229)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(133, 46)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Kas Keluar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.kasKeluar.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kasKeluar.Location = New System.Drawing.Point(613, 229)
+        Me.kasKeluar.Name = "kasKeluar"
+        Me.kasKeluar.Size = New System.Drawing.Size(133, 46)
+        Me.kasKeluar.TabIndex = 2
+        Me.kasKeluar.Text = "Kas Keluar"
+        Me.kasKeluar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'rekapitulasi
         '
-        Me.Button3.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(613, 302)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(133, 46)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Rekapitulasi"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.rekapitulasi.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rekapitulasi.Location = New System.Drawing.Point(613, 302)
+        Me.rekapitulasi.Name = "rekapitulasi"
+        Me.rekapitulasi.Size = New System.Drawing.Size(133, 46)
+        Me.rekapitulasi.TabIndex = 3
+        Me.rekapitulasi.Text = "Rekapitulasi"
+        Me.rekapitulasi.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -105,46 +106,60 @@ Partial Class Home
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Total Saldo                 :"
         '
-        'TextBox1
+        'masuk
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(259, 154)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(260, 26)
-        Me.TextBox1.TabIndex = 7
+        Me.masuk.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.masuk.Location = New System.Drawing.Point(259, 154)
+        Me.masuk.Name = "masuk"
+        Me.masuk.ReadOnly = True
+        Me.masuk.Size = New System.Drawing.Size(260, 26)
+        Me.masuk.TabIndex = 7
         '
-        'TextBox2
+        'keluar
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(259, 226)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(260, 26)
-        Me.TextBox2.TabIndex = 8
+        Me.keluar.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.keluar.Location = New System.Drawing.Point(259, 226)
+        Me.keluar.Name = "keluar"
+        Me.keluar.ReadOnly = True
+        Me.keluar.Size = New System.Drawing.Size(260, 26)
+        Me.keluar.TabIndex = 8
         '
-        'TextBox3
+        'saldo
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(259, 295)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(260, 26)
-        Me.TextBox3.TabIndex = 9
+        Me.saldo.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saldo.Location = New System.Drawing.Point(259, 295)
+        Me.saldo.Name = "saldo"
+        Me.saldo.ReadOnly = True
+        Me.saldo.Size = New System.Drawing.Size(260, 26)
+        Me.saldo.TabIndex = 9
         '
-        'Form1
+        'data
+        '
+        Me.data.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data.Location = New System.Drawing.Point(79, 362)
+        Me.data.Name = "data"
+        Me.data.Size = New System.Drawing.Size(133, 46)
+        Me.data.TabIndex = 10
+        Me.data.Text = "Tampil Data"
+        Me.data.UseVisualStyleBackColor = True
+        '
+        'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.data)
+        Me.Controls.Add(Me.saldo)
+        Me.Controls.Add(Me.keluar)
+        Me.Controls.Add(Me.masuk)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.rekapitulasi)
+        Me.Controls.Add(Me.kasKeluar)
         Me.Controls.Add(Me.kasMasuk)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
+        Me.Name = "Home"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -153,12 +168,13 @@ Partial Class Home
 
     Friend WithEvents Label1 As Label
     Friend WithEvents kasMasuk As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents kasKeluar As Button
+    Friend WithEvents rekapitulasi As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents masuk As TextBox
+    Friend WithEvents keluar As TextBox
+    Friend WithEvents saldo As TextBox
+    Friend WithEvents data As Button
 End Class
