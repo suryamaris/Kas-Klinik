@@ -1,22 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports CrystalDecisions
+
 Public Class rekap
-    Private Sub Masuk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        tampil()
-    End Sub
-
-    Sub tampil()
-        bukakoneksi()
-        Dim da As New SqlDataAdapter("SELECT * FROM dbo.[kas]", conn)
-        Dim ds As New DataSet
-        da.Fill(ds)
-        Dim dt As New DataTable
-
-        For Each dt In ds.Tables
-            DataGridView1.DataSource = dt
-        Next
-
-    End Sub
 
     Private Sub kasMasuk_Click(sender As Object, e As EventArgs) Handles kasMasuk.Click
         Me.Hide()
@@ -32,4 +18,14 @@ Public Class rekap
         Me.Hide()
         Home.Show()
     End Sub
+
+    Private Sub cetak_Click(sender As Object, e As EventArgs) Handles cetak.Click
+
+        Dim report As New CrystalReport1
+        Me.CrystalReportViewer1.ReportSource = report
+        Me.Show()
+
+
+    End Sub
+
 End Class

@@ -2,7 +2,6 @@
 Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Module koneksi
-
     Public comSQL As New SqlClient.SqlCommand
     Public sql As String
     Public conn As New SqlConnection

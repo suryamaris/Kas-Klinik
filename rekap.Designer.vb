@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class rekap
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class rekap
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.KasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -31,10 +31,9 @@ Partial Class rekap
         Me.kasMasuk = New System.Windows.Forms.Button()
         Me.kembali = New System.Windows.Forms.Button()
         Me.cetak = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         CType(Me.KasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'KasBindingSource
@@ -102,20 +101,23 @@ Partial Class rekap
         Me.cetak.Text = "Cetak"
         Me.cetak.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'CrystalReportViewer1
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 80)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 267)
-        Me.DataGridView1.TabIndex = 29
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(14, 72)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ReportSource = "CrystalReport1.rpt"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(753, 278)
+        Me.CrystalReportViewer1.TabIndex = 29
         '
         'rekap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.cetak)
         Me.Controls.Add(Me.kembali)
         Me.Controls.Add(Me.Button2)
@@ -126,7 +128,6 @@ Partial Class rekap
         Me.Text = "rekap"
         CType(Me.KasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,5 +153,9 @@ Partial Class rekap
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents CrystalReport11 As Kas_Klinik.CrystalReport1
+    Friend WithEvents CrystalReport12 As Kas_Klinik.CrystalReport1
+    Friend WithEvents CrystalReport13 As Kas_Klinik.CrystalReport1
+    Friend WithEvents CrystalReportViewer1 As CrystalReportViewer
+
 End Class
